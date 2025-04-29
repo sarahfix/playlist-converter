@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playlist Converter</title>
+</head>
+<body>
+  <h1>Convert Spotify Playlist to Apple Music</h1>
+  <form method="POST">
+    <label for="playlist_url">Paste Spotify Playlist URL:</label><br>
+    <input type="text" name="playlist_url" required>
+    <button type="submit">Convert</button>
+  </form>
+</body>
+</html>
