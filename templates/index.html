@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Playlist Converter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Converter</title>
 </head>
 <body>
-  <h1>Convert Spotify Playlist to Apple Music</h1>
-  <form method="POST">
-    <label for="playlist_url">Paste Spotify Playlist URL:</label><br>
-    <input type="text" name="playlist_url" required>
-    <button type="submit">Convert</button>
-  </form>
+    <h1>Welcome to Playlist Converter</h1>
+    
+    <p><a href="{{ url_for('login') }}">Login with Spotify</a></p>
+    
+    <h2>Transfer Playlist</h2>
+    <form action="{{ url_for('transfer_playlist') }}" method="POST">
+        <label for="spotify_playlist_url">Spotify Playlist URL:</label>
+        <input type="text" id="spotify_playlist_url" name="spotify_playlist_url" required>
+        <button type="submit">Transfer to Apple Music</button>
+    </form>
 </body>
 </html>
